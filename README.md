@@ -27,7 +27,7 @@
 ###Milestone 3:
 ------
 #####Add save button that spits out a JSON representation of the annotations to the console
-  Tasks:
+  	Tasks:
 	1. Figure out the locations of all the annotations, relative to an untouched document
 	2. Add Save button that packages those annotations into an object, JSON.stringify() the object, print result to console
 
