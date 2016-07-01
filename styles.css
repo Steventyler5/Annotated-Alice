@@ -9,3 +9,11 @@
 .ORGANIZATION {
 	background-color: yellow;
 }
+
+#header {
+	margin-bottom: 20px;
+}
+
+div.hidden {
+	display : none;
+}
