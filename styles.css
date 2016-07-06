@@ -1,11 +1,46 @@
+body {
+	background-color: lightsteelblue;
+}
+
 .PERSON {
-	background-color: green;
+	background-color: lightgreen;
 }
 
 .LOCATION {
-	background-color: red;
+	background-color: lightpink;
 }
 
 .ORGANIZATION {
-	background-color: yellow;
+	background-color: lightblue;
+}
+
+#header {
+	padding: 15px 15px 20px 15px;
+	background-color: floralwhite;
+	margin-top: 15px;
+	border-radius: 10px 10px 0 0;
+	border-bottom: 2px solid lightslategrey;
+}
+
+button {
+	border-radius: 10px;
+	color: white;
+	background-color: darkgrey;
+	font-size: 12px;
+	margin: 15px 15px 10px 0;
+}
+
+#text {
+	padding: 20px;
+	background-color: floralwhite;	
+	margin-bottom: 20px;
+	border-radius: 0 0 10px 10px;
+}
+
+div.hidden {
+	display : none;
+}
+
+span {
+	cursor: pointer;
 }
