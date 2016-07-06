@@ -81,27 +81,35 @@ $(document).ready(function(){
 
 
 	$("#newAnnotation").click(function(event){
-			//Clicking newAnnotation captures the text selected by the user
-	 		let selection = window.getSelection();
-	 		//check to make sure some text has been selected by making sure the beginning and end points of the selection aren't the same
-	 		if (selection.focusOffset !== selection.anchorOffset) {
-		 		//and the range of the selection
-		 		let range = selection.getRangeAt(0);
-		 		//then creates a span element
-		 		let span = document.createElement('span');
-	      //ensure that the user has selected a category before trying to set the class of the span
-	      if ($("#selectCategory").val() !== null) {
-			 		//sets the className of the to the appropriate category, designated by the select menu
-		      span.className = $("#selectCategory").val();
-		      //wraps the selected text in the formatted span element
-		      range.surroundContents(span);
-	      }
-	    }
-	 	})
+		//If the delete annotation menu is visible, hide it
+		if (!$("#deleteAnnotationMenu").hasClass("hidden")) {
+			$("#deleteAnnotationMenu").addClass("hidden");
+		}
+		//Clicking newAnnotation captures the text selected by the user
+ 		let selection = window.getSelection();
+ 		//check to make sure some text has been selected by making sure the beginning and end points of the selection aren't the same
+ 		if (selection.focusOffset !== selection.anchorOffset) {
+	 		//and the range of the selection
+	 		let range = selection.getRangeAt(0);
+	 		//then creates a span element
+	 		let span = document.createElement('span');
+      //ensure that the user has selected a category before trying to set the class of the span
+      if ($("#selectCategory").val() !== null) {
+		 		//sets the className of the to the appropriate category, designated by the select menu
+	      span.className = $("#selectCategory").val();
+	      //wraps the selected text in the formatted span element
+	      range.surroundContents(span);
+      }
+    }
+ 	})
 
 
 	//delete button changes the visibility of the div containing instructions for deleting annotations
 	$("#delete").click(function(){
+		//If the add annotation menu is visible, hide it
+		if (!$("#newAnnotationMenu").hasClass("hidden")) {
+			$("#newAnnotationMenu").addClass("hidden")
+		}
 		//if the delete menu is currently hidden
 		if ($("#deleteAnnotationMenu").hasClass("hidden")) {
 			//make it visible
