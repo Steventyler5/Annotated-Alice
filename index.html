@@ -6,6 +6,27 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<div id="header">
+		<div id="legend">
+			Legend:
+			<span class="PERSON">Person</span>
+			<span class="LOCATION">Location</span>
+			<span class="ORGANIZATION">Organization</span>
+		</div>
+		<button id="select">Annotation Menu</button>
+		<div class="hidden" id="newAnnotationMenu">
+			Highlight a desired text snippet, select the proper category form the dropdown, and click the New Annotation button.
+			<div>
+				<select name="category" id="selectCategory">
+					<option value="default" selected disabled>Select a Category</option>
+					<option value="PERSON">Person</option>
+					<option value="LOCATION">Location</option>
+					<option value="ORGANIZATION">Organization</option>
+				</select>
+				<button id="newAnnotation">New Annotation</button>
+			</div>
+		</div>
+	</div>
 
 	<div id="text"></div>
 
