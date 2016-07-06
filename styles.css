@@ -17,3 +17,7 @@
 div.hidden {
 	display : none;
 }
+
+span {
+	cursor: pointer;
+}
